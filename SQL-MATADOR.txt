@@ -1,0 +1,24 @@
+
+O verdadeiro SQL INJECTION
+
+<pre>
+
+
+\"105 or 1=2 admin'
+\"105 or 1=2 login'
+\"105 or 1=2 base dados'
+\"@12 //injection aberta
+\"@0 //injection fechada
+
+\"@105 2024' //the best cod
+
+\"@105 2024'atas
+
+\"@0 //melhor codigo
+\"@-0 //codigo força injet
+
+
+\"@-0'tables //abre tabelas sqk todas
+//Injetar este cod sql abrir fonte de pagina
+//control f ==depois ation
+</pre>
