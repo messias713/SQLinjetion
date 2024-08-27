@@ -2,7 +2,8 @@
 O verdadeiro SQL INJECTION
 
 <pre>
-
+Codigo matador==
+\!-12 2024
 
 \"105 or 1=2 admin'
 \"105 or 1=2 login'
