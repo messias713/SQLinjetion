@@ -1,0 +1,21 @@
+Criar links pesquisa hacker===
+link EXEMPLO==
+12&nbsp;Neglinnaya Street, Moscow, 107016 Russia
+
+Criar pesquisa original
+===12&nbsp;\"@-12'base-dados
+
+12&nbsp;http://www.cm-lisboa.pt/pt
+
+Criar codigo 
+12&bp-base-dados;banco portugal
+
+criar12& depois as letras iniciais da pesquisa
+Exemplo== 12&fbi-info;fbi
+<----------------------------------------->
+Exemplo== 12-12&gov.ru-info;gov.ru
+Exemplo== 11-111&gov.el-salvador-info;gov-el-salvador
+<--------------------------------------------------------->
+NOVA PESQUISA SQL
+exemplo==11-111&gov.el-salvador-info;gov-el-salvador/base dados
+
