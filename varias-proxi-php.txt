@@ -1,0 +1,112 @@
+<pre>
+PROXIS TUNEL PHP-
+
+Exemplo 1: Proxy para Bing
+
+<?php
+$url = "https://www.bing.com/";
+$context = stream_context_create(array('http' => array('header' => 'Accept-Encoding: gzip')));
+$content = file_get_contents($url, false, $context);
+if ($content !== false) {
+    echo $content;
+} else {
+    echo "Erro ao carregar o conteúdo.";
+}
+?>
+
+
+Exemplo 2: Proxy para Google
+
+<?php
+$url = "https://www.google.com/";
+$context = stream_context_create(array('http' => array('header' => 'Accept-Encoding: gzip')));
+$content = file_get_contents($url, false, $context);
+if ($content !== false) {
+    echo $content;
+} else {
+    echo "Erro ao carregar o conteúdo.";
+}
+?>
+
+
+Exemplo 3: Proxy para Wikipedia
+
+<?php
+$url = "https://www.wikipedia.org/";
+$context = stream_context_create(array('http' => array('header' => 'Accept-Encoding: gzip')));
+$content = file_get_contents($url, false, $context);
+if ($content !== false) {
+    echo $content;
+} else {
+    echo "Erro ao carregar o conteúdo.";
+}
+?>
+
+Exemplo 4: Proxy para YouTube
+
+<?php
+$url = "https://twitter.com/";
+$context = stream_context_create(array('http' => array('header' => 'Accept-Encoding: gzip')));
+$content = file_get_contents($url, false, $context);
+if ($content !== false) {
+    echo $content;
+} else {
+    echo "Erro ao carregar o conteúdo.";
+}
+?>
+
+Exemplo 5: Proxy para Twitter
+
+<?php
+$url = "https://twitter.com/";
+$context = stream_context_create(array('http' => array('header' => 'Accept-Encoding: gzip')));
+$content = file_get_contents($url, false, $context);
+if ($content !== false) {
+    echo $content;
+} else {
+    echo "Erro ao carregar o conteúdo.";
+}
+?>
+
+<-------------------------------------------------->
+Proxi inserida no html
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Redirecionando...</title>
+    <script>
+        window.onload = function() {
+            setInterval(function() {
+                window.location.href = "https://psicografia23.blogspot.com";
+            }, 20000);
+        }
+    </script>
+    <noscript>
+        <meta http-equiv="refresh" content="0;url=https://psicografia23.blogspot.com">
+    </noscript>
+</head>
+<body>
+    <pre>
+Criada proxi tunel php
+direto no html
+<-------------------------->
+O pgp deve sempre ser inserido
+isolado numa div
+    </pre>
+    <p>Se você não for redirecionado automaticamente, <a href="https://psicografia23.blogspot.com">clique aqui</a>.</p>
+
+    <!-- Código PHP separado -->
+    <div>
+        <?php include 'proxy_bing.php'; ?> <!-- Substitua pelo nome do arquivo do proxy desejado -->
+    </div>
+
+    <!-- Exibindo conteúdo do proxy -->
+    <br>
+    <iframe src="proxy_bing.php" style="width: 100%; height: 500px; border: none;"></iframe> <!-- Substitua pelo nome do arquivo do proxy desejado -->
+</body>
+</html>
+
+</pre>
