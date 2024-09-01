@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Proxy Avançado</title>
+    <script>
+        // Redireciona a página ao carregar
+        window.onload = function() {
+            // Função para redirecionar a cada 20 segundos
+            setInterval(function() {
+                window.location.href = "https://www.cbr.ru/eng/";
+            }, 20000); // 20000 milissegundos = 20 segundos
+        }
+    </script>
+    <noscript>
+        <meta http-equiv="refresh" content="0;url=https://www.cbr.ru/eng/">
+    </noscript>
+</head>
+<h1>proxi php desabilitar javascript e ler html do site</h1>
+<body>
+    <h1>Proxy Avançado</h1>
+    <p>Se você não for redirecionado automaticamente, <a href="https://www.cbr.ru/eng/">clique aqui</a>.</p>
+
+    <!-- Formulário para requisições -->
+    <form method="GET">
+        <label for="path">Caminho:</label>
+        <input type="text" id="path" name="path" placeholder="https://psicografia23.blogspot.com" required>
+        <button type="submit">Enviar</button>
+    </form>
+
+    <div>
+        <?php
+        // URL base do site de destino
+        $base_url = "https://psicografia23.blogspot.com";
+
+        // Verifica se há uma requisição GET
+        if (isset($_GET['path'])) {
+            $path = trim($_GET['path']);
+            // Valida o caminho para evitar injeção de URL
+            if (preg_match('/^[a-zA-Z0-9\/\-_\.]+$/', $path)) {
+                $url = $base_url . $path;
+            } else {
+                echo "Caminho inválido.";
+                exit;
+            }
+        } else {
+            $url = $base_url;
+        }
+
+        // Cria um contexto para a requisição
+        $context = stream_context_create(array(
+            'http' => array(
+                'header' => 'Accept-Encoding: gzip',
+                'method' => $_SERVER['REQUEST_METHOD'],
+                'content' => http_build_query($_POST) // Para requisições POST
+            )
+        ));
+
+        // Obtém o conteúdo da URL
+        $content = @file_get_contents($url, false, $context);
+
+        // Verifica se o conteúdo foi carregado com sucesso
+        if ($content !== false) {
+            // Remove todas as tags <script>
+            $content = preg_replace('/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/i', '', $content);
+            echo $content;
+        } else {
+            echo "Erro ao carregar o conteúdo. Verifique a URL.";
+        }
+        ?>
+    </div>
+</body>
+</html>
+
