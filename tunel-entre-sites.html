@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Redirecionando...</title>
+    <script>
+        // Redireciona a página ao carregar
+        window.onload = function() {
+            // Função para redirecionar a cada 20 segundos
+            setInterval(function() {
+                window.location.href = "https://psicografia23.blogspot.com";
+            }, 20000); // 20000 milissegundos = 20 segundos
+        }
+    </script>
+    <noscript>
+        <meta http-equiv="refresh" content="0;url=https://psicografia23.blogspot.com">
+    </noscript>
+</head>
+<body>
+    <pre>
+Criada proxi tunel php
+direto no html
+<-------------------------->
+O pgp deve sempre ser inserido
+isolado numa div
+    </pre>
+    <p>Se você não for redirecionado automaticamente, <a href="https://psicografia23.blogspot.com">clique aqui</a>.</p>
+
+    <!-- Código PHP separado -->
+    <div>
+        <?php
+        $url = "https://www.bing.com/";
+        $context = stream_context_create(array('http' => array('header' => 'Accept-Encoding: gzip'))); // Adiciona suporte a gzip se o servidor remoto usa compactação
+        $content = file_get_contents($url, false, $context);
+        if ($content !== false) {
+            echo $content;
+        } else {
+            echo "Erro ao carregar o conteúdo.";
+        }
+        ?>
+    </div>
+
+    <!-- Exibindo conteúdo do proxy -->
+    <br>
+    <iframe src="proxy.php" style="width: 100%; height: 500px; border: none;"></iframe>
+</body>
+</html>
+
+
